@@ -1,8 +1,66 @@
 <section class="list" id="previous-speakers">
+
   <div class="container-fluid">
     <div class="row no-gutter">
-      <h2 class="section-heading text-center">Wichitalks WSU hosted by Shocker Startup</h2>
-      <h3 class="text-center">September 16, 2016</h3>
+      <h2 class="section-heading text-center"><span class="highlight">Wichitalks at Roxy's</span></h2>
+      <h3 class="text-center"><span class="highlight">March 30, 2018</span></h3>
+      <hr class="primary">
+      {% for post in site.posts %}
+        {% if post.event == 20180330 %}
+          <div class="col-lg-4 col-sm-6">
+            <a href="{{ post.url }}" class="portfolio-box">
+              <img src="{{ post.image }}" class="img-responsive" alt="{{ post.speaker }}">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    {{ post.speaker }}<br>on
+                  </div>
+                  <div class="project-name">
+                    {{ post.title }}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <br><br>
+
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <h2 class="section-heading text-center"><span class="highlight">Wichitalks at Roxy's</span></h2>
+      <h3 class="text-center"><span class="highlight">July 13, 2017</span></h3>
+      <hr class="primary">
+      {% for post in site.posts %}
+        {% if post.event == 20170713 %}
+          <div class="col-lg-4 col-sm-6">
+            <a href="{{ post.url }}" class="portfolio-box">
+              <img src="{{ post.image }}" class="img-responsive" alt="{{ post.speaker }}">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    {{ post.speaker }}<br>on
+                  </div>
+                  <div class="project-name">
+                    {{ post.title }}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <br><br>
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <h2 class="section-heading text-center"><span class="highlight">Wichitalks WSU Hosted by Shocker Startup</span></h2>
+      <h3 class="text-center"><span class="highlight">September 16, 2016</span></h3>
       <hr class="primary">
       {% for post in site.posts %}
         {% if post.event == 20160916 %}
@@ -26,10 +84,11 @@
     </div>
   </div>
   <br><br>
+
   <div class="container-fluid">
     <div class="row no-gutter">
-      <h2 class="section-heading text-center">Wichitalks Riverfest at the Wichita Boathouse</h2>
-      <h3 class="text-center">June 7, 2016</h3>
+      <h2 class="section-heading text-center"><span class="highlight">Wichitalks Riverfest at the Wichita Boathouse</span></h2>
+      <h3 class="text-center"><span class="highlight">June 7, 2016</span></h3>
       <hr class="primary">
       {% for post in site.posts %}
         {% if post.event == 20160607 %}
@@ -53,10 +112,11 @@
     </div>
   </div>
   <br><br>
+
   <div class="container-fluid">
     <div class="row no-gutter">
-      <h2 class="section-heading text-center">Wichitalks at Central Standard Brewing</h2>
-      <h3 class="text-center">April 13, 2016</h3>
+      <h2 class="section-heading text-center"><span class="highlight">Wichitalks at Central Standard Brewing</span></h2>
+      <h3 class="text-center"><span class="highlight">April 13, 2016</span></h3>
       <hr class="primary">
       {% for post in site.posts %}
         {% if post.event == 20160413 %}
@@ -80,10 +140,11 @@
     </div>
   </div>
   <br><br>
+
   <div class="container-fluid">
     <div class="row no-gutter">
-      <h2 class="section-heading text-center">Wichitalks at The Labor Party</h2>
-      <h3 class="text-center">January 29, 2016</h3>
+      <h2 class="section-heading text-center"><span class="highlight">Wichitalks at The Labor Party</span></h2>
+      <h3 class="text-center"><span class="highlight">January 29, 2016</span></h3>
       <hr class="primary">
       {% for post in site.posts %}
         {% if post.event == 20160129 %}

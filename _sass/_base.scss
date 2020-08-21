@@ -18,6 +18,7 @@ hr.light {
     border-color: white;
 }
 
+// handling them links, yo
 a {
     @include transition-all;
     color: $theme-primary;
@@ -26,6 +27,13 @@ a {
         color: darken($theme-primary, 10%);
     }
 }
+
+.copy-to-clipboard:hover {
+    color: $theme-primary;
+    cursor: copy;
+}
+
+
 
 h1,
 h2,
@@ -63,8 +71,37 @@ aside {
     padding: 50px 0;
 }
 
-.no-padding {
-    padding: 0;
+// Blog page formatting for reading area
+.reading {
+    background-color: white;
+    opacity: 0.99;
+    color: $theme-dark;
+    margin-top: 6em;
+    margin-bottom: 6em;
+    border-radius: 0.1em;
+    @media (max-width: 650px) {
+            padding: 0;
+            width: 100%;
+        }
+
+    h2 {
+        text-align: center;
+        font-size: 3em;
+        padding: 10px;
+        @media (max-width: 650px) {
+            padding: 0;
+        }
+    }
+
+    p {
+        padding-left: 2em;
+        padding-right: 2em;
+        text-align: justify;
+        @media (max-width: 650px) {
+            padding: 0;
+            text-align: left;
+        }
+    }
 }
 
 // Navigation
@@ -155,7 +192,7 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/header.png');
     text-align: center;
     color: white;
     .header-content {
@@ -209,6 +246,12 @@ header {
 
 .section-heading {
     margin-top: 0;
+    text-align: center;
+}
+
+span.highlight {
+    background-color: $theme-primary;
+    color: white;
 }
 
 .service-box {
@@ -219,6 +262,14 @@ header {
     }
     p {
         margin-bottom: 0;
+    }
+}
+
+.sponsor {
+     width: 100px;
+     filter: grayscale(100%);
+    &:hover {
+        filter: grayscale(0%);
     }
 }
 
@@ -259,7 +310,7 @@ header {
             }
         }
     }
-    
+
     @media(max-width:768px) {
         .portfolio-box-caption {
             opacity: 0.85;
@@ -286,12 +337,6 @@ header {
                 }
             }
         }
-    }
-}
-
-.call-to-action {
-    h2 {
-        margin: 0 auto 20px;
     }
 }
 
@@ -329,7 +374,30 @@ header {
 // Contact
 #contact .fa {
     color: $theme-dark;
-    font-size: 4em;
+}
+
+.twitter:hover {
+    color: #1da1f2 !important;
+}
+
+.facebook:hover {
+    color: #3b5998 !important;
+}
+
+.github:hover {
+    color: #4078c0 !important;
+}
+
+.instagram:hover {
+    color: #f56040 !important;
+}
+
+.linkedin:hover {
+    color: #0077b5 !important;
+}
+
+.email:hover {
+    color: $theme-primary !important;
 }
 
 // Extras
@@ -363,3 +431,20 @@ body {
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 li.previous{ background: #F05F40; list-style-type: none; height: 125px; padding: 3%; color: rgba(255, 255, 255, 0.95); border: #ffffff solid 1px; }
 .list ul {padding: 0;}
+
+// Hiding a post on screens that are not tablets or mobile devices.
+.hide_on_large_screen {
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+// contact section on presenter pages
+.contact-icons {
+    display: inline-block;
+    text-align: left;
+
+    a {
+        text-decoration: none;
+    }
+}
